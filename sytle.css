@@ -157,10 +157,24 @@ body {
 @media (max-width: 576px) {
   .Header-background {
     height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-right: -30px;
+    margin-top: -9px;
   }
 
   .Header-background h1 {
     font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .Abstract,
+  .Infographic,
+  .Podcast-title {
+    text-align: center;
   }
 
   .Abstract h2,
@@ -173,6 +187,11 @@ body {
     font-size: 0.9rem;
   }
 
+  .logo-icon {
+    display: flex;
+    justify-content: center;
+  }
+
   .logo-icon img {
     height: 50px;
   }
@@ -180,10 +199,14 @@ body {
   .Infographic img {
     height: auto;
     max-width: 100%;
+    display: block;
+    margin: 0 auto;
   }
 
   .video-container iframe {
     width: 100%;
     height: auto;
+    display: block;
+    margin: 0 auto;
   }
 }
