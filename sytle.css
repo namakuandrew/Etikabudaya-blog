@@ -33,23 +33,10 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-@keyframes fadeSlideIn {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-slide {
   animation: fadeSlideIn 1.5s ease-out forwards;
 }
 
+/* Keyframe for fade-in slide */
 @keyframes fadeSlideIn {
   0% {
     opacity: 0;
@@ -73,6 +60,7 @@ body {
 }
 
 .Header-background h1 {
+  animation: fadeSlideIn 2.5s ease-out forwards;
   position: relative;
   font-size: 65px;
   z-index: 2;
