@@ -1,0 +1,212 @@
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-image: url(Assets/low-poly-grid-haikei.svg);
+}
+
+.Header-background {
+  background-image: url(Assets/prev-desktop_toyota-merespons-tren-modifikasi-cumi-cumi-darat-pada-mobil-diesel-138868_000000868831_d6eb92e3_203c_4523_a40c_373f230d383e.jpg);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 400px;
+  position: relative;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation: fadeSlideIn 1.5s ease-out forwards;
+}
+
+/* Keyframe for fade-in slide */
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.Header-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.384);
+  z-index: 1;
+}
+
+.Header-background h1 {
+  animation: fadeSlideIn 2.5s ease-out forwards;
+  position: relative;
+  font-size: 65px;
+  z-index: 2;
+}
+
+.Abstract {
+  width: 98%;
+  padding: 20px;
+  text-align: center;
+  padding-top: -20px;
+  background-color: rgba(129, 128, 128, 0.575);
+  backdrop-filter: blur(5px);
+}
+
+.Abstract h2 {
+  color: white;
+  margin-top: -10px;
+  font-size: 50px;
+}
+
+.Abstract p {
+  color: white;
+  padding: 20px 20px 20px;
+  font-size: 20px;
+}
+
+.Video-podcast {
+  width: 98%;
+  padding: 20px;
+  text-align: center;
+  padding-top: -20px;
+  background-color: rgba(129, 128, 128, 0.575);
+  backdrop-filter: blur(5px);
+}
+
+.Podcast-title {
+  color: white;
+  font-size: 40px;
+  margin-top: -50px;
+}
+
+.Infographic {
+  width: 98%;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(211, 211, 211, 0.397);
+  background-color: rgba(129, 128, 128, 0.575);
+  padding-top: -20px;
+  backdrop-filter: blur(5px);
+}
+
+.Infographic h2 {
+  color: white;
+  margin-top: -5px;
+  font-size: 50px;
+}
+
+.Infographic img {
+  height: 70rem;
+  width: 30rem;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 50%; /* Aspect ratio 16:9 (height/width = 9/16) */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  margin: 20px auto;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Make the website responsive */
+@media (min-width: 1080px) {
+  .Header-background {
+    height: 500px;
+  }
+
+  .Header-background h1 {
+    font-size: 4rem;
+  }
+
+  .Abstract,
+  .Video-podcast,
+  .Infographic {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .Abstract h2,
+  .Infographic h2 {
+    font-size: 3rem;
+  }
+
+  .Podcast-title {
+    font-size: 2rem;
+  }
+}
+
+/* Responsive Adjustments for Mobile (576px and Below) */
+@media (max-width: 576px) {
+  .Header-background {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-right: -30px;
+    margin-top: -9px;
+  }
+
+  .Header-background h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .Abstract,
+  .Infographic,
+  .Podcast-title {
+    text-align: center;
+  }
+
+  .Abstract h2,
+  .Infographic h2 {
+    font-size: 1.5rem;
+  }
+
+  .Abstract p,
+  .Podcast-title {
+    font-size: 0.9rem;
+  }
+
+  .logo-icon {
+    display: flex;
+    justify-content: center;
+  }
+
+  .logo-icon img {
+    height: 50px;
+  }
+
+  .Infographic img {
+    height: auto;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .video-container iframe {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+}
